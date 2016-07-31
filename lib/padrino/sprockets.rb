@@ -35,6 +35,7 @@ module Padrino
           case kind
           when :css then 'assets'
           when :js  then 'assets'
+          when :images  then 'assets'
           else kind.to_s
           end
         end
@@ -62,6 +63,7 @@ module Padrino
         @assets.append_path 'assets/javascripts'
         @assets.append_path 'assets/stylesheets'
         @assets.append_path 'assets/images'
+        @assets.append_path 'assets/fonts'
 
         if minify
           if defined?(YUI)
